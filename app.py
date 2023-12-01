@@ -3,13 +3,6 @@ import os
 
 
 def siteContent():
-    with open(os.path.abspath('templates/index.html'), 'r') as file:
-        blocks = 0
-        lines = file.readlines()
-        for line in lines:
-            if 'id="block"' in line:
-                blocks += 1
-    file.close()
     blockDict = {
         'block1': [placeholderImg, placeholderDescription],
         'block2': [placeholderImg, placeholderDescription],
