@@ -22,11 +22,5 @@ def siteDefaultTheme():
                            blockDict=siteContent(), stylesheet='light')
 
 
-@app.route('/darkMode')
-def siteDarkTheme():
-    return render_template('index.html', content=placeholderDescription, image=placeholderImg,
-                           blockDict=siteContent(), stylesheet='dark')
-
-
 if __name__ == '__main__':
     app.run()
