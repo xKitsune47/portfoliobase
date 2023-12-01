@@ -1,0 +1,21 @@
+{% macro block(content, image, side) %}
+    {% if side == 'right' %}
+        <div id="block" style="float: right;">
+            <div class="rightContent">
+                <p>{{ content }}</p>
+            </div>
+            <div class="rightImg">
+                <img src="{{ image }}" alt="placeholder" class="projectImageRight">
+            </div>
+        </div>
+    {% else %}
+        <div id="block" style="float: left;">
+            <div class="leftImg">
+                <img src="{{ image }}" alt="placeholder" class="projectImageLeft">
+            </div>
+            <div class="leftContent">
+                <p>{{ content }}</p>
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}

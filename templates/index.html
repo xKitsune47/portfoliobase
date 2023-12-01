@@ -1,0 +1,82 @@
+{% import 'macros.jinja2' as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>//portfolio_base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato" rel="stylesheet" />
+    <link rel="icon" href="../static/imgs/placeholder.jpg" />
+    <link rel="stylesheet" type="text/css" href="../static/css/styleDark.css">
+    <script src="../static/scripts/stylesheetChanger.js"></script>
+</head>
+<body>
+    <aside id="sideNavbar">
+        <a href="#aboutText" class="navbarLink">About me</a>
+        <a href="#projects" class="navbarLink">Projects</a>
+        <a href="#contact" class="navbarLink">Contact me</a>
+        <a href="https://github.com/xKitsune47" target="_blank" class="navbarLink">
+            <img src="../static/imgs/github-mark-white.svg" class="githubLogo" alt="githubLogo">
+        </a>
+        <label for="switch" class="switchParent">Dark/Light mode</label>
+        <label class="switch" id="switch">
+            <input type="checkbox" id="stylesheetChanger" onclick="changingStyles()">
+            <span class="slider round"></span>
+        </label>
+    </aside>
+    <div id="main">
+        <section id="intro">
+            <h1 class="pseudoCSS">.Lorem{<br>
+                    <span class="indented">ipsum dolor sit amet;</span><br>
+                    <span class="indented">consectetur adipiscing elit;</span><br>
+                    <span class="indented">Quisque sollicitudin;</span><br>
+                    <span class="indented">bibendum tempus;</span><br>
+                    <span class="indented">Donec interdum nisi ultrices;</span><br>
+                    <span class="indented">sodales vestibulum;</span><br>
+                    <span class="indented">Curabitur tempus tortor;</span><br>
+            }<!--blinking cursor here-->
+            </h1>
+        </section>
+        <section id="aboutText">
+            <div class="aboutBlock">
+                <div class="aboutTextC">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin bibendum tempus. Donec interdum nisi ultrices sodales vestibulum. Curabitur tempus tortor sit amet nulla porttitor tristique. Integer eget bibendum purus. Fusce vitae augue vehicula, tincidunt dui nec, sodales nunc.</p>
+                </div>
+                <div class="aboutImg">
+                    <img src="../static/imgs/placeholder.jpg" class="aboutImg" alt="placeholder">
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            {% for key, value in blockDict.items() %}
+                {% if loop.index0 is divisibleby(2) %}
+                    {% set side = 'right' %}
+                    {{ macros.block(content, image, side) }}
+                {% else %}
+                    {% set side = 'left' %}
+                    {{ macros.block(content, image, side) }}
+                {% endif %}
+            {% endfor %}
+        <section id="contact">
+            <div class="contactInfo">
+                <label class="contactLabel">Find me on</label><br>
+                <span class="social">
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="../static/imgs/In-White-128@2x.png" class="socialImg" alt="linkedin">
+                    </a>
+                </span>
+            </div>
+            <div class="contactForm">
+                <label for="contactInput" class="contactLabel">Contact me</label>
+                <form action="mailto:aintworkingyet@aintworking.com" method="post" enctype="text/plain" class="contactInput">
+                    <input type="text" name="name" placeholder="Your name here" class="contactMe" disabled> <br>
+                    <input type="text" name="email" placeholder="Your e-mail address here" class="contactMe" disabled> <br>
+                    <textarea name="mailContent" placeholder="Your message here" class="contactMe" wrap="soft" rows="5" disabled></textarea><br>
+                    <input type="submit" value="Send" class="submitForm" disabled>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

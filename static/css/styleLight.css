@@ -1,0 +1,352 @@
+html{
+    scroll-behavior: smooth;
+    height: 200%;
+}
+
+body{
+    background-color: #59C9A5;
+    font-family: 'Abel', sans-serif;
+    margin: 0;
+    height: 100%;
+    min-width: 50em;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+  }
+   
+body::-webkit-scrollbar-thumb {
+    background-color: #2F675E;
+    border-radius: 3.125em;
+}
+
+#sideNavbar{
+    background-color: #2F675E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    float: left;
+    height: 100%;
+    min-width: 10em;
+    width: 12.5%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0; 
+}
+
+#main{
+    float: left;
+    height: 100%;
+    padding: 3em;
+    margin-left: 15%;
+    min-width: 40em;
+}
+
+#intro{
+    height: 50%;
+    font-family: 'Consolas', serif;
+    color: #050517;
+}
+
+.pseudoCSS{
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.indented{
+    padding: 50px;
+}
+
+#aboutText{
+    height: 55em;
+    width: 70%;
+    margin: auto;
+    padding: 2em;
+}
+
+.aboutBlock{
+    width: 100%;
+    background-color: #2F675E;
+    height: 70%;
+    border-radius: 2em;
+}
+
+.aboutTextC{
+    float: left;
+    width: 50%;
+    padding: 2%;
+    font-size: 1.75em;
+    color: #59C9A5;
+}
+
+.aboutImg{
+    float: left;
+    width: 42%;
+    padding: 2%;
+}
+
+img.aboutImg{
+    display: block;
+    margin: auto;
+    width: 60%;
+    border-radius: 2em 3em 2em 3em;
+}
+
+#projects{
+    min-height: 40%;
+}
+
+#contact{
+    height: 20%;
+    clear: both;
+    width: 100%;
+    margin-top: 10em;
+}
+
+.contactInfo{
+    width: 45%;
+    padding: 2.5%;
+    float: left;
+    text-align: center;
+}
+
+.contactForm{
+    width: 45%;
+    padding: 2.5%;
+    float: left;
+    text-align: center;
+    color: #050517;
+}
+
+.contactLabel{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.contactInput{
+    padding: 2.5%;
+}
+
+.contactMe{
+    width: 100%;
+    background-color: #2F675E;
+    color: #59C9A5;
+    font-family: 'Abel', sans-serif;
+    margin-bottom: 1em;
+}
+
+.contactMe[type=text]{
+    padding: 0.625em;
+    border: none;
+    border-radius: 1em;
+}
+
+.contactMe[type=text]::placeholder{
+    color: #59C9A5;
+}
+
+.contactForm textarea{
+    padding: 0.625em;
+    border: none;
+    border-radius: 1em;
+    resize: none;
+    scroll-behavior: smooth;
+}
+
+.contactForm textarea::placeholder{
+    color: #59C9A5;
+}
+
+.submitForm{
+    background-color: #2F675E;
+    color: #59C9A5;
+    border: none;
+    float: left;
+    border-radius: 1em;
+    padding: 0.625em;
+    width: 15%;
+    font-family: 'Lato', sans-serif;
+}
+
+.submitForm:hover{
+    cursor: pointer;
+}
+
+.socialImg{
+    width: 5em;
+    vertical-align: middle;
+    padding: 3.125em;
+}
+
+#sideNavbar a{
+    width: 95%;
+}
+
+.switch{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.switchParent{
+    color: #59C9A5;
+}
+
+a.navbarLink{
+    text-decoration: none;
+    color: #59C9A5;
+    margin-bottom: 2em;
+    font-size: 2.5em;
+    padding: 2.5%;
+}
+
+a.navbarLink:visited{
+    color: #59C9A5;
+}
+
+a.navbarLink:hover{
+    background-color: #59C9A5;
+    color: #050517;
+    transition: .4s;
+}
+
+img.githubLogo{
+    opacity: 0.75;
+}
+
+#block{
+    padding: 0.5em;
+    width: 80%;
+    height: fit-content;
+    font-size: 2em;
+    margin-top: 2em;
+    border-radius: 3.125em;
+    background-color: #2F675E;
+    color: #59C9A5;
+}
+
+.leftImg{
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 2.5%;
+}
+
+img.projectImageRight{
+    width: 100%;
+    height: auto;
+    border-radius: 1em 2em 2em 1em;
+}
+
+img.projectImageLeft{
+    width: 100%;
+    height: auto;
+    border-radius: 2em 1em 1em 2em;
+}
+
+.leftContent{
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding: 2.5%;
+}
+
+.rightImg{
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 2.5%;
+}
+
+
+.rightContent{
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding: 2.5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+::-moz-selection{
+    color: white;
+    background-color: #AB87FF;
+}
+
+::selection{
+    color: white;
+    background-color: #AB87FF;
+}
+
+.submitForm:disabled{
+    background-color: #567671;
+}
+
+.submitForm:disabled:hover{
+    cursor: not-allowed;
+}
+
+.contactMe:disabled:hover{
+    cursor: not-allowed;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75em;
+  height: 2.125em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #59C9A5;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.652em;
+  width: 1.625em;
+  left: 0.25em;
+  bottom: 0.25em;
+  background-color: #2F675E;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+input:checked + .slider {
+  background-color: #59C9A5;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #59C9A5;
+}
+
+input:checked + .slider:before {
+  -ms-transform: translateX(1.5em);
+  transform: translateX(1.5em);
+}
+
+.slider.round {
+  border-radius: 2em;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
